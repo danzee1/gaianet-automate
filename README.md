@@ -12,7 +12,7 @@ This script automates the installation and configuration of Gaia nodes. It allow
 2. Navigate to the directory containing the script.
 3. Run the script using:
    ```bash
-   bash setup_gaia_node.sh
+   bash main.sh
    ```
 4. Follow the on-screen prompts to enter the node number, port, and select the model configuration.
 
