@@ -15,6 +15,8 @@ This script automates the installation and configuration of Gaia nodes. It allow
    bash main.sh
    ```
 4. Follow the on-screen prompts to enter the node number, port, and select the model configuration.
+5. Choose 1 to install & run gaianet node with Qwen1.5 0.5 Chat Model
+6. Join my domain ==> admin.gaia.domains
 
 ## Features
 - Lists currently running Gaia nodes with their ports.
