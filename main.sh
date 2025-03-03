@@ -36,25 +36,25 @@ else
 fi
 
 # Define node directory
-NODE_DIR="$HOME/gaia-node-$NODE_NUM"
+NODE_DIR=$HOME/gaia-node-$NODE_NUM
 
 # Create folder for the new node
-mkdir -p "$NODE_DIR"
+mkdir -p $NODE_DIR
 
 # Install Gaia node
 curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash -s -- --base "$NODE_DIR"
 source $HOME/.bashrc
 
 # Configure Gaia node
-gaianet init --base "$NODE_DIR" --config "$CONFIG_URL"
+gaianet init --base $NODE_DIR --config $CONFIG_URL
 
-gaianet config --base "$NODE_DIR" --port "$PORT_NUM"
+gaianet config --base $NODE_DIR --port $PORT_NUM
 
-gaianet init --base "$NODE_DIR"
+gaianet init --base $NODE_DIR
 
 # Start Gaia node
-sudo lsof -t -i:"$PORT_NUM" | xargs kill -9
-gaianet start --base "$NODE_DIR"
+sudo lsof -t -i:$PORT_NUM | xargs kill -9
+gaianet start --base $NODE_DIR
 
 # Display node info
-gaianet info --base "$NODE_DIR"
+gaianet info --base $NODE_DIR
